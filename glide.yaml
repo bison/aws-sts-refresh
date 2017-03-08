@@ -1,0 +1,7 @@
+package: github.com/bison/aws-sts-refresh
+import:
+- package: github.com/aws/aws-sdk-go
+  version: ~1.7.5
+- package: github.com/ogier/pflag
+- package: github.com/go-ini/ini
+  version: ~1.25.2
