@@ -1,0 +1,10 @@
+[Unit]
+Description=AWS STS Refresh
+
+[Service]
+Type=simple
+EnvironmentFile=/usr/lib/systemd/user/aws-sts-refresh.env
+ExecStart=${GOPATH}/bin/aws-sts-refresh -p '${PROFILE}' -r '${ROLE_ARN}' -n '${SESSION_NAME}'
+
+[Install]
+WantedBy=default.target

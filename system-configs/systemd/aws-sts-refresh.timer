@@ -1,0 +1,10 @@
+[Unit]
+Description=Refresh AWS STS credentials periodically before they expire.
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=30min
+Unit=aws-sts-refresh.service
+
+[Install]
+WantedBy=timers.target
